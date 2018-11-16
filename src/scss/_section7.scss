@@ -1,0 +1,252 @@
+.section7 {
+    width: 100%;
+#closeForm{
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 7px;
+    margin-top: 10px;
+    margin-left: 315px;
+}
+    h3 { @include font-size(2.3);}
+
+    p {
+        @include font-size(1.8);
+        margin-bottom: 38px;
+    }
+
+    .myForm {
+        display: inline-block;
+    }
+
+    .inputInform {
+        float: left;
+        width: 636px;
+        height: 50px;
+        text-indent: 20px;
+        @include font-size(1.5);
+        color: $color-gray-light;
+        @include media-breakpoint-down(xs) { 
+            width: 250px;
+             }
+             @include media-breakpoint-down(md) { 
+                width: 232px;
+             }
+
+    }
+
+    .myForm2 {
+        display: none;
+        padding-top: 50px;
+        position: relative;
+
+        .movingLabel{
+            display: none;
+            position: absolute;
+            left: 50px;
+            font-size: 1.5rem;
+        }
+        .emailQuestion{
+            position: absolute;
+            left: 50px;
+            font-size: 1.5rem;
+            opacity: 0.3;
+            top: 66px;
+            animation: LabelMoveUp 0.3s forwards;
+        }
+        .pitanje{
+            position: absolute;
+            left: 50px;
+            font-size: 1.5rem;
+            opacity: 0.3;
+            top: 146px;
+            transition: all 0.3s;
+            animation: LabelMoveUp 0.3s forwards;
+        }
+                    /* The container */
+                    .container {
+                        display: block;
+                        position: relative;
+                        padding-left: 20px;
+                        margin: 0;
+                        margin-bottom: 10px;
+                        width: 100%;
+                        text-align: start;
+                        cursor: pointer;
+                        font-size: 1.3rem;
+                        color:$color-gray-dark;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+
+                        a{
+                            display: inline;
+                            text-decoration-line: underline;
+                            color:$color-gray;
+                            margin-left: 5px;
+                        }
+                    }
+
+                    /* Hide the browser's default checkbox */
+                    .container input {
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 0;
+                        width: 0;
+                    }
+
+                    /* Create a custom checkbox */
+                    .checkmark {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 15px;
+                        width: 15px;
+                        background-color: #eee;
+                        border: 1px solid green;
+                    }
+                    /* Create the checkmark/indicator (hidden when not checked) */
+                    .checkmark:after {
+                        content: "";
+                        position: absolute;
+                        display: none;
+                    }
+
+                    /* Show the checkmark when checked */
+                    .container input:checked ~ .checkmark:after {
+                        display: block;
+                    }
+
+                    /* Style the checkmark/indicator */
+                    .container .checkmark:after {
+                        left: 5px;
+                        top: -2px;
+                        width: 7px;
+                        height: 12px;
+                        border: solid $color-text-red;
+                        border-width: 0 2px 2px 0;
+                        -webkit-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                    }
+        
+///////////////////////////////////////////////
+         input{
+            margin: 20px;
+            width: 600px;
+            height: 40px;
+            text-indent: 20px;
+            font-size: 1.5rem;
+            color: $color-gray;
+            outline: none;
+            border-width: 0;
+            border-bottom:none;
+            transition: all 0.4s ease-in-out;
+
+            &:focus{
+                border-bottom: 2px solid $color-text-red;
+                    }                
+        }
+    }
+    .bdtInform {
+       float: left;
+        background-color: $color-text-red;
+        width: 182px;
+        height: 50px;
+        border: none;
+        color: white;
+        padding: 15px 50px;
+        @include font-size(1.4);
+        @include media-breakpoint-down(xs) { 
+            width: 72px;
+            background-image:url('../assets/svg/auto.svg');
+            background-repeat: no-repeat;
+           background-size: 70px ;
+           background-position: center;
+            background-color: white;
+             }
+             @include media-breakpoint-down(md) { 
+                width: 122px;
+                padding: 5px 10px;
+             }
+       
+    }
+
+    .bdtInformContainer {
+        padding: 66px;
+        background-color: $color-gray-light;
+    }
+
+    .pitanjeZaNas {
+        background-color: $color-back;
+        border-bottom: 2px solid $color-gray;
+
+        h3 {@include font-size(2.4);}
+        p {@include font-size(1.7);}
+    }
+
+    .btnPitanjeZaNas {
+        border: 2px solid $color-text-red;
+        padding: 20px 100px;
+        color: $color-gray-dark;
+        @include font-size(1.4);
+
+        &:hover{
+            color:white;
+            }
+    }
+
+    .posalji{
+        margin-left:200px;
+        width: 152px;
+        height: 40px;
+        padding: 5px 20px;
+    }
+
+    a{
+        margin-left:  auto;
+        width: 50px;
+    }
+
+    .dugme3{
+        margin: 0 auto;
+        height: 45px;
+        width: 45px;
+        background:white;
+        border-radius: 100%;
+        z-index: 22;
+        color:$color-text-red;
+     
+      
+       &:hover .iconica-strelica-dugme3{
+        animation: strelica-gore-dole 0.4s forwards ;
+       }
+
+        .iconica-strelica-dugme3{
+            transform: rotate(-90deg);
+            height: 16px;
+            width: 16px;
+            fill:red;;
+        }
+    }
+    .iconice-sive{
+        margin: 5px;
+        width: 11px;
+        height: 11px;
+        opacity: 0.5;
+     }
+}
+
+@keyframes LabelMoveUp{
+    0%{opacity: 0;
+    }100%{opacity: 1;
+        transform: translateY(-20px)
+    }
+}
+
+@keyframes strelica-gore-dole{
+    0%{transform: translateY(0px) rotate(-90deg);}
+    50%{transform: translateY(-20px) rotate(-90deg) ;}
+    100%{transform: translateX(0px) rotate(-90deg);}
+}

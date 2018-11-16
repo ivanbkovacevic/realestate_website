@@ -1,0 +1,37 @@
+@mixin font-size($sizeValue: 1.6) {
+    font-size: ($sizeValue * 10) + px;
+    font-size: $sizeValue + rem;
+  }
+
+
+
+  @mixin redArrowsvg {
+            margin-left: 18px;
+            fill:red;
+            width: 12px;
+            height: 12px;
+    }
+
+@mixin redArrowa {
+    text-decoration: none;
+    font-size: 1.5rem;
+    
+    }
+
+    @mixin hoverArrow {
+      &:svg{
+        animation: strelica-gore-dole 0.4s forwards 3;
+      }
+    }
+
+    @keyframes strelica-gore-dole{
+      0%{
+          transform: translateY(0px) rotate(-90deg);
+      }
+      50%{
+          transform: translateY(-20px) rotate(-90deg) ;
+      }
+      100%{
+          transform: translateX(0px) rotate(-90deg);
+      }
+  }

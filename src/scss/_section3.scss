@@ -1,0 +1,103 @@
+.section3{
+    text-align: center;
+   
+    h1{
+        margin-top: 148px;
+        @include font-size(3.2);
+        padding: 5px;
+        @include media-breakpoint-down(xs) { 
+            margin-top: 8px;
+            max-width: 100%;
+        }
+    }
+
+    h6{
+        @include font-size(1.4);
+        margin-bottom: 26px;
+        @include media-breakpoint-down(sm) { 
+          color: black;
+          }
+    }
+
+    p{
+        @include font-size(1.4);
+        min-height: 100px;
+        @include media-breakpoint-down(xs) { 
+          margin-bottom: 35px;
+            }
+    }
+
+    a{
+        @include font-size(1.8);
+        text-decoration: none;
+        color:$color-text-red;
+    }
+
+    .head-p{
+        width: 768px;
+        margin:0 auto;
+        margin-bottom: 68px;
+        @include font-size(1.8);
+        @include media-breakpoint-down(xs) { 
+            max-width: 100%;
+            margin-bottom: 70px;
+            padding: 0 20px;
+         }
+    }
+
+    h2{
+        @include font-size(9.3);
+        font-weight: 100;
+        color:$color-text-red;
+    }
+    .brojeviRow{
+        margin-bottom: 60px;
+        padding: 0 110px;  
+    }
+
+    .brojeviCol{  
+        padding: 0 12px;
+    }
+
+    .bottomRow{
+        color:$color-text-red;
+        border-top: 2px solid $color-gray-light;
+        font-size: 1.2rem;
+    }
+
+    a{
+        text-decoration: none;
+        &:hover .iconica-strelica{
+            animation: strelica-levo-desno 0.4s forwards 3;
+          }
+    }
+
+    .iconica-strelica{
+        margin-left: 18px;
+    }
+
+    /////carousel on sm screens
+    .carousel-item{
+        height: 300px;
+        width: 100%;
+    }
+    .carousel-indicators{
+        .active{
+            background-color: red;
+           } 
+    }
+    .carousel-li{
+        width: 8px;
+        height: 8px;
+        border-radius: 100px; 
+        margin-right: 21px;
+    }
+    .carousel-control-next{
+        height: 100%;
+    }
+    .carousel-control-prev{
+        height: 100%;
+    }
+    
+}
+
