@@ -1,0 +1,17 @@
+.myButton {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: $color-background-red;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    transition: all 0.4s;
+
+    &:hover{
+        background-color: darken($color: $color-background-red, $amount:20%) ;
+    }
+
+}

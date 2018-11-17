@@ -1,0 +1,23 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 160px;
+    background-color: $color-gray-light;
+    font-size: 1.5rem;
+
+    a{
+        text-decoration: none;
+        color: $color-gray-dark;
+
+        &:hover{
+            color: $color-text-red;
+        }
+    }
+
+    i{
+        margin-right: 3px;
+    }
+
+}

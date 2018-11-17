@@ -1,8 +1,11 @@
 .recmApartm {
-    height: 1300px;
+    height: 100%;
     width: 100%;
     padding: 100px 100px;
-
+    
+    .wraper{
+        width: 100%;
+    }
     h1 {
         margin: 50px auto;
         font-weight: bold;
@@ -27,13 +30,9 @@
         width: 100%;
         transition: all 0.5s;
 
-      
-
         &:hover .imageOverlay{
             opacity: 1;
         }
-
-       
 
         .imageOverlay {
             position: absolute;
@@ -46,8 +45,6 @@
             padding: 15px;
             transition: all 0.8s;
         
-        
-
             p {
                 transition: all 0.8s;
                 position: absolute;

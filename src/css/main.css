@@ -6354,6 +6354,20 @@ body {
 
 /* 
 ////////////////PRE SET/////////////////////////// */
+.myButton {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  color: white;
+  background-color: red;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  transition: all 0.4s; }
+  .myButton:hover {
+    background-color: #990000; }
+
 .myCarousel {
   position: relative;
   width: 100%; }
@@ -6388,9 +6402,10 @@ body {
     width: 4%;
     background-color: #eb0e0e; }
   .myCarousel .carousel-caption {
-    bottom: 35%;
-    font-size: 3rem;
-    font-weight: bold; }
+    bottom: 35%; }
+    .myCarousel .carousel-caption h1 {
+      font-size: 5rem;
+      font-weight: bold; }
   .myCarousel .formWraper {
     position: absolute;
     bottom: 4%;
@@ -6402,18 +6417,22 @@ body {
   .myCarousel .custom-select {
     height: 48px;
     width: 95%; }
-  .myCarousel .myButton {
-    width: 100px;
-    height: 50px;
-    color: white;
-    background-color: red;
-    font-size: 2rem;
-    padding: 10px 20px; }
+
+.formResponsive {
+  padding: 50px 120px; }
+  .formResponsive .form-control-lg {
+    height: 60px; }
+  .formResponsive .formResponsive {
+    width: 100%;
+    height: 100%;
+    padding: 0; }
 
 .recmApartm {
-  height: 1300px;
+  height: 100%;
   width: 100%;
   padding: 100px 100px; }
+  .recmApartm .wraper {
+    width: 100%; }
   .recmApartm h1 {
     margin: 50px auto;
     font-weight: bold;
@@ -6480,34 +6499,159 @@ body {
   position: relative;
   width: 100%;
   height: 500px;
-  padding: 100px;
+  padding: 80px;
   overflow: hidden;
-  margin-bottom: 300px; }
+  margin-top: 50px; }
+  .ourAdvantages h1 {
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: bold;
+    z-index: 222; }
+  .ourAdvantages .columnCont:hover .rectangle {
+    transform: rotate(45deg); }
   .ourAdvantages video {
     position: absolute;
-    top: 0;
+    top: -75%;
     left: 0;
     bottom: 0;
     right: 0;
-    opacity: 0.5; }
-  .ourAdvantages h1 {
-    font-size: 5rem;
-    color: #c91919;
-    text-align: center;
-    margin-bottom: 80px;
-    font-weight: bold; }
-  .ourAdvantages p {
-    font-size: 1.6rem; }
+    opacity: 1;
+    z-index: -1;
+    filter: brightness(30%); }
   .ourAdvantages .paragraf {
     position: absolute;
-    top: 40%;
-    left: 40%;
+    top: 14%;
+    left: 42%;
     font-size: 4rem;
+    font-weight: bold;
+    color: white; }
+  .ourAdvantages p {
+    font-size: 2rem;
+    color: white;
     font-weight: bold; }
   .ourAdvantages .rectangle {
     width: 100px;
     height: 100px;
     border: 2px solid white;
-    transition: all 0.5s; }
-    .ourAdvantages .rectangle:hover {
-      transform: rotate(90deg); }
+    margin-bottom: 40px;
+    transition: all 0.3s; }
+
+.services {
+  height: 1200px;
+  padding: 50px;
+  width: 100%;
+  margin-bottom: 200px;
+  margin-top: 10px; }
+  .services h1 {
+    font-size: 3.1rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 50px; }
+  .services .cont {
+    padding: 0 5px;
+    margin-bottom: 5px; }
+    .services .cont:hover .overlay {
+      top: 0px;
+      background-color: rgba(0, 0, 0, 0.411); }
+    .services .cont:hover .myButton {
+      display: block; }
+    .services .cont:hover .image--1 {
+      background-position: 1%; }
+  .services .image {
+    width: 100%;
+    overflow: hidden; }
+  .services .image--1 {
+    height: 250px;
+    background-image: url(../assets/img/apartmentCarousel1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all  0.5s; }
+    .services .image--1:hover {
+      background-position: 1%; }
+  .services .overlay {
+    position: absolute;
+    overflow: hidden;
+    top: 175px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    transition: all  0.5s; }
+    .services .overlay p {
+      color: white;
+      font-size: 2rem;
+      padding: 0 50px;
+      margin: 30px 0 20px 0; }
+    .services .overlay .myButton {
+      width: 85%;
+      margin: 0 auto;
+      transition: all  0.5s; }
+  .services .btnServices {
+    width: 190px;
+    padding: 5px 10px;
+    text-align: center;
+    margin: 50px auto;
+    margin-left: 40%; }
+
+.testemonials {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 100px;
+  margin-top: 300px;
+  background-image: url(../assets/img/apartmentCarousel1.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .testemonials .carousel {
+    padding-top: 50px; }
+    .testemonials .carousel-inner {
+      margin-top: 50px; }
+  .testemonials h1 {
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center; }
+  .testemonials h5 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center; }
+  .testemonials h5::after {
+    display: block;
+    content: "#";
+    color: white;
+    font-size: 4rem; }
+  .testemonials img {
+    width: 100px;
+    border-radius: 50%;
+    margin: 100px auto; }
+  .testemonials .carousel-caption {
+    bottom: 0%; }
+
+.contactUs {
+  height: 500px;
+  padding: 150px; }
+  .contactUs h1 {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 70px; }
+  .contactUs .myButton {
+    margin: 10px 45%; }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 160px;
+  background-color: #e0dfdf;
+  font-size: 1.5rem; }
+  .footer a {
+    text-decoration: none;
+    color: #5e5b5b; }
+    .footer a:hover {
+      color: #e60028; }
+  .footer i {
+    margin-right: 3px; }
