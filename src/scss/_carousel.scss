@@ -1,0 +1,81 @@
+.myCarousel {
+    position: relative;
+    width: 100%;
+
+    .carouselDiv {
+        height: 400px;
+
+        &--1 {
+            height: 400px;
+            background-image: url(../assets/img/apartmentCarousel1.jpeg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &--2 {
+            height: 400px;
+            background-image: url(../assets/img/apartmentCarousel2.jpeg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &--3 {
+            height: 400px;
+            background-image: url(../assets/img/apartmentCarousel3.jpeg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+    }
+
+    .carousel-control-next {
+        top: 35%;
+        bottom: 35%;
+        width: 4%;
+        background-color: rgb(235, 14, 14);
+    }
+
+    .carousel-control-prev {
+        top: 35%;
+        bottom: 35%;
+        width: 4%;
+        background-color: rgb(235, 14, 14);
+    }
+
+    .carousel-caption {
+        bottom: 35%;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .formWraper {
+        position: absolute;
+        bottom: 4%;
+        width: 100%;
+        padding: 0 100px;
+    }
+
+    .form-control {
+        height: 48px;
+        width: 95%;
+
+    }
+
+    .custom-select {
+        height: 48px;
+        width: 95%;
+    }
+
+          .myButton {
+        width: 100px;
+        height: 50px;
+        color: white;
+        background-color: $color-background-red;
+        font-size: 2rem;
+        padding: 10px 20px;
+    }
+
+}

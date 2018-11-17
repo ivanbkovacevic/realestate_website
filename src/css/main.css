@@ -6324,14 +6324,6 @@ a.text-dark:hover, a.text-dark:focus {
     .carousel-caption {
       bottom: 1px; } }
 
-.navbar-collapse {
-  position: absolute;
-  left: 30%;
-  display: block;
-  width: 100px;
-  background-color: blue;
-  margin-right: 100px; }
-
 @keyframes strelica-gore-dole {
   0% {
     transform: translateY(0px) rotate(-90deg); }
@@ -6355,10 +6347,167 @@ html {
   /* Sets up the Base 10 stuff */ }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
   line-height: 1.5;
   background-color: #f2f2f2; }
 
 /* 
 ////////////////PRE SET/////////////////////////// */
+.myCarousel {
+  position: relative;
+  width: 100%; }
+  .myCarousel .carouselDiv {
+    height: 400px; }
+    .myCarousel .carouselDiv--1 {
+      height: 400px;
+      background-image: url(../assets/img/apartmentCarousel1.jpeg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    .myCarousel .carouselDiv--2 {
+      height: 400px;
+      background-image: url(../assets/img/apartmentCarousel2.jpeg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    .myCarousel .carouselDiv--3 {
+      height: 400px;
+      background-image: url(../assets/img/apartmentCarousel3.jpeg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+  .myCarousel .carousel-control-next {
+    top: 35%;
+    bottom: 35%;
+    width: 4%;
+    background-color: #eb0e0e; }
+  .myCarousel .carousel-control-prev {
+    top: 35%;
+    bottom: 35%;
+    width: 4%;
+    background-color: #eb0e0e; }
+  .myCarousel .carousel-caption {
+    bottom: 35%;
+    font-size: 3rem;
+    font-weight: bold; }
+  .myCarousel .formWraper {
+    position: absolute;
+    bottom: 4%;
+    width: 100%;
+    padding: 0 100px; }
+  .myCarousel .form-control {
+    height: 48px;
+    width: 95%; }
+  .myCarousel .custom-select {
+    height: 48px;
+    width: 95%; }
+  .myCarousel .myButton {
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: red;
+    font-size: 2rem;
+    padding: 10px 20px; }
+
+.recmApartm {
+  height: 1300px;
+  width: 100%;
+  padding: 100px 100px; }
+  .recmApartm h1 {
+    margin: 50px auto;
+    font-weight: bold;
+    font-size: 5rem;
+    text-align: center; }
+  .recmApartm h4 {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #4d4feb; }
+  .recmApartm p {
+    font-size: 1.5rem;
+    color: #5e5b5b; }
+  .recmApartm .image {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    transition: all 0.5s; }
+    .recmApartm .image:hover .imageOverlay {
+      opacity: 1; }
+    .recmApartm .image .imageOverlay {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.548);
+      opacity: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 15px;
+      transition: all 0.8s; }
+      .recmApartm .image .imageOverlay p {
+        transition: all 0.8s;
+        position: absolute;
+        bottom: 1%;
+        color: white;
+        opacity: 0;
+        z-index: 2;
+        font-size: 1.5rem; }
+      .recmApartm .image .imageOverlay:hover p {
+        opacity: 1;
+        bottom: 70%; }
+    .recmApartm .image--1 {
+      height: 250px;
+      background-image: url(../assets/img/apartmentCarousel1.jpeg);
+      background-size: 140%;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: all  0.5s; }
+      .recmApartm .image--1:hover {
+        background-position: 4px; }
+    .recmApartm .image .price {
+      position: absolute;
+      bottom: 5%;
+      right: 0;
+      height: 30px;
+      width: 70px;
+      color: white;
+      font-size: 1.6rem;
+      background-color: red;
+      text-align: center;
+      z-index: 22; }
+
+.ourAdvantages {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  padding: 100px;
+  overflow: hidden;
+  margin-bottom: 300px; }
+  .ourAdvantages video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.5; }
+  .ourAdvantages h1 {
+    font-size: 5rem;
+    color: #c91919;
+    text-align: center;
+    margin-bottom: 80px;
+    font-weight: bold; }
+  .ourAdvantages p {
+    font-size: 1.6rem; }
+  .ourAdvantages .paragraf {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    font-size: 4rem;
+    font-weight: bold; }
+  .ourAdvantages .rectangle {
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    transition: all 0.5s; }
+    .ourAdvantages .rectangle:hover {
+      transform: rotate(90deg); }
