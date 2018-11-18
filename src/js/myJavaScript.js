@@ -122,10 +122,14 @@ $(document).ready(function(){
              
             })
 
-            // $("#tiha").click(function(){
-            //     $(this).addClass("animated slideOutUp");
-            // })
-        
+         /////////////NAVBAR ################33
+         $('#open').click(function(){
+             $('#side-menu').addClass('active');
+         })
+
+         $('#close').click(function(){
+            $('#side-menu').removeClass('active');
+        })
 })
 
 
