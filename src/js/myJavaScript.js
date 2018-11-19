@@ -124,12 +124,10 @@ $(document).ready(function(){
 
          /////////////NAVBAR ################33
          $('#open').click(function(){
-             $('#side-menu').addClass('active');
+             $('#side-menu').toggleClass('active');
          })
 
-         $('#close').click(function(){
-            $('#side-menu').removeClass('active');
-        })
+        
 })
 
 

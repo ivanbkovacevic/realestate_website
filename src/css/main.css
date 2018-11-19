@@ -6365,40 +6365,111 @@ body {
   outline: none;
   overflow: hidden;
   transition: all 0.4s; }
+  .myButton::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 25%;
+    height: 100%;
+    transform: translateY(100%);
+    background-color: blue;
+    transition: all 0.4s; }
+  .myButton::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 25%;
+    width: 25%;
+    height: 100%;
+    transform: translateY(-100%);
+    background-color: #eeff00;
+    transition: all 0.4s; }
+  .myButton:hover:before {
+    transform: translateY(0%); }
+  .myButton:hover:after {
+    transform: translateY(0%); }
   .myButton:hover {
     background-color: #990000; }
+  .myButton .mySpan::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    transform: translateY(-100%);
+    background-color: #ff0080;
+    transition: all 0.4s; }
+  .myButton .mySpan::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    width: 25%;
+    height: 100%;
+    transform: translateY(100%);
+    background-color: #00ff2a;
+    transition: all 0.4s; }
+  .myButton .mySpan:hover:before {
+    transform: translateY(0%); }
+  .myButton .mySpan:hover:after {
+    transform: translateY(0%); }
 
-.navbar {
-  height: 60px;
+.navbarr {
+  height: 150px;
   border: 1px solid red;
-  width: 100%; }
-  .navbar .navbar-nav {
-    font-size: 3rem;
-    padding: 10px;
-    height: 50px;
-    width: 90%;
-    background-color: rgba(255, 0, 191, 0.479); }
-    .navbar .navbar-nav a {
-      display: inline;
-      height: 50px;
-      width: 10%;
-      background-color: rgba(0, 17, 255, 0.479); }
+  width: 100%;
+  padding: 30px; }
+  .navbarr span {
+    display: none; }
+    @media (max-width: 991.98px) {
+      .navbarr span {
+        display: block; } }
+  .navbarr i {
+    font-size: 3rem; }
+  .navbarr .cont {
+    float: right;
+    height: 30px;
+    width: 80%;
+    margin: 0 auto; }
+    @media (max-width: 991.98px) {
+      .navbarr .cont {
+        display: none; } }
+    .navbarr .cont a {
+      display: inline-block;
+      height: 30px;
+      width: 15%;
+      font-size: 1.5rem;
+      text-align: center; }
 
 .side-nav {
+  padding: 10px;
   width: 300px;
-  height: 200px;
+  height: 700px;
   font-size: 2rem;
-  background-color: rgba(255, 94, 0, 0.479);
   transform: translateX(-300px);
-  transition: all 0.5s; }
-  .side-nav a {
-    display: block; }
+  transition: all 0.5s;
+  position: absolute;
+  z-index: 99999;
+  background-color: white; }
+  .side-nav .side_a {
+    display: block;
+    color: blue;
+    transition: all 0.4s;
+    margin: 2px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 5px; }
+    .side-nav .side_a:hover {
+      background-color: #1100ff;
+      color: white; }
 
 .active {
   transform: translateX(0px); }
-
-.kita li {
-  display: inline; }
 
 .myCarousel {
   position: relative;
@@ -6571,10 +6642,8 @@ body {
     transition: all 0.3s; }
 
 .services {
-  height: 1200px;
   padding: 50px;
   width: 100%;
-  margin-bottom: 200px;
   margin-top: 10px; }
   .services h1 {
     font-size: 3.1rem;
@@ -6593,9 +6662,9 @@ body {
       background-position: 1%; }
   .services .image {
     width: 100%;
-    overflow: hidden; }
+    overflow: hidden;
+    height: 250px; }
   .services .image--1 {
-    height: 250px;
     background-image: url(../assets/img/apartmentCarousel1.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -6630,40 +6699,56 @@ body {
 
 .testemonials {
   width: 100%;
-  height: 500px;
-  margin-bottom: 100px;
-  margin-top: 300px;
+  padding: 50px;
   background-image: url(../assets/img/apartmentCarousel1.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
-  .testemonials .carousel {
-    padding-top: 50px; }
-    .testemonials .carousel-inner {
-      margin-top: 50px; }
   .testemonials h1 {
     color: white;
-    font-size: 5rem;
+    text-align: center;
+    font-size: 2.6rem;
     font-weight: bold;
-    text-align: center; }
-  .testemonials h5 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center; }
-  .testemonials h5::after {
-    display: block;
-    content: "#";
-    color: white;
+    margin-bottom: 50px; }
+  .testemonials ol {
+    bottom: -20px; }
+  .testemonials i {
     font-size: 4rem; }
-  .testemonials img {
+  .testemonials .myIndicators li {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%; }
+  .testemonials .carousel-item .image {
+    height: 100px;
     width: 100px;
-    border-radius: 50%;
-    margin: 100px auto; }
-  .testemonials .carousel-caption {
-    bottom: 0%; }
+    border-radius: 50%; }
+    .testemonials .carousel-item .image__1 {
+      background-image: url(../assets/img/people1.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .testemonials .carousel-item .image__2 {
+      background-image: url(../assets/img/people2.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .testemonials .carousel-item .image__3 {
+      background-image: url(../assets/img/people3.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; }
+  .testemonials .carousel-item p {
+    color: white;
+    font-size: 1.5rem; }
+  .testemonials .carousel-item p:nth-of-type(2) {
+    font-size: 2rem; }
+  .testemonials .carousel-item p:nth-of-type(3) {
+    font-size: 2rem;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 30px; }
 
 .contactUs {
-  height: 500px;
   padding: 150px; }
   .contactUs h1 {
     text-align: center;
