@@ -6364,59 +6364,71 @@ body {
   border: none;
   outline: none;
   overflow: hidden;
-  transition: all 0.4s; }
+  opacity: 0.99;
+  transition: all 0.4s;
+  z-index: 1; }
   .myButton::before {
     content: "";
     display: inline-block;
     position: absolute;
     top: 0;
-    left: 25%;
+    left: 0%;
     width: 25%;
-    height: 100%;
+    height: 50px;
     transform: translateY(100%);
-    background-color: blue;
+    background-color: #d10909;
+    opacity: 0.5;
+    z-index: -1;
     transition: all 0.4s; }
   .myButton::after {
     content: "";
     display: inline-block;
     position: absolute;
     top: 0;
-    right: 25%;
+    right: 0%;
     width: 25%;
-    height: 100%;
+    height: 50px;
     transform: translateY(-100%);
-    background-color: #eeff00;
-    transition: all 0.4s; }
+    background-color: #d10909;
+    opacity: 0.5;
+    transition: all 0.4s;
+    z-index: -1; }
   .myButton:hover:before {
     transform: translateY(0%); }
   .myButton:hover:after {
     transform: translateY(0%); }
-  .myButton:hover {
-    background-color: #990000; }
-  .myButton .mySpan::before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    width: 25%;
-    height: 100%;
-    transform: translateY(-100%);
-    background-color: #ff0080;
-    transition: all 0.4s; }
-  .myButton .mySpan::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    width: 25%;
-    height: 100%;
-    transform: translateY(100%);
-    background-color: #00ff2a;
-    transition: all 0.4s; }
-  .myButton .mySpan:hover:before {
+  .myButton:hover .mySpan:before {
     transform: translateY(0%); }
-  .myButton .mySpan:hover:after {
+  .myButton:hover .mySpan:after {
     transform: translateY(0%); }
+  .myButton .mySpan {
+    z-index: 99999; }
+    .myButton .mySpan::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 25%;
+      width: 25%;
+      height: 50px;
+      transform: translateY(-100%);
+      background-color: #d10909;
+      opacity: 0.5;
+      z-index: -1;
+      transition: all 0.4s; }
+    .myButton .mySpan::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 25%;
+      width: 25%;
+      height: 50px;
+      transform: translateY(100%);
+      background-color: #d10909;
+      opacity: 0.5;
+      z-index: -1;
+      transition: all 0.4s; }
 
 .navbarr {
   height: 150px;
@@ -6772,3 +6784,27 @@ body {
       color: #e60028; }
   .footer i {
     margin-right: 3px; }
+
+.test {
+  height: 100px;
+  width: 100px;
+  color: aliceblue;
+  text-align: center;
+  padding: 40px;
+  margin-left: 100px; }
+  .test__1 {
+    position: relative;
+    background-color: red;
+    z-index: 2;
+    opacity: 0.99; }
+  .test__2 {
+    position: relative;
+    background-color: blue;
+    margin-top: -20px;
+    margin-left: 120px;
+    opacity: 0.99;
+    z-index: 1; }
+  .test__3 {
+    background-color: green;
+    margin-top: -20px;
+    margin-left: 140px; }
