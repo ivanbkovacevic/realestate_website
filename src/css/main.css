@@ -6341,6 +6341,12 @@ a.text-dark:hover, a.text-dark:focus {
 *::after {
   box-sizing: inherit; }
 
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0; }
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -6441,28 +6447,28 @@ body {
   outline: none; }
 
 .navbarr {
-  position: relative;
+  position: fixed;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100px;
   border: 1px solid red;
+  background-color: white;
   width: 100%;
-  padding: 20px 30px; }
-  .navbarr .brand {
-    display: inline-block;
-    width: 20%;
-    height: 80%;
-    background-image: url(../assets/img/apartmentCarousel3.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; }
+  top: 0;
+  padding: 20px 30px;
+  z-index: 9999; }
+  @media (max-width: 991.98px) {
+    .navbarr {
+      justify-content: flex-start; } }
   .navbarr .toogleIcon {
     display: none;
     float: left;
-    width: 50px;
-    height: 50px;
-    padding: 5px;
-    border: 1px solid black; }
+    width: 35px;
+    height: 35px;
+    padding: 4px;
+    margin-right: 10px;
+    border: 1px solid #161616; }
     @media (max-width: 991.98px) {
       .navbarr .toogleIcon {
         display: block; } }
@@ -6471,29 +6477,32 @@ body {
       content: '-';
       display: block;
       width: 90%;
-      height: 5px;
-      margin-top: 45%;
-      background-color: black;
+      height: 4px;
+      border-radius: 25%;
+      margin-top: 38%;
+      background-color: #161616;
       transition: all 0.8s; }
       .navbarr .toogleIcon span::before {
         position: absolute;
         content: ' ';
         display: block;
         width: 100%;
-        height: 5px;
+        height: 4px;
+        border-radius: 25%;
         bottom: 200%;
         right: 0;
-        background-color: black;
+        background-color: #161616;
         transition: all 0.8s; }
       .navbarr .toogleIcon span::after {
         position: absolute;
         content: ' ';
         display: block;
         width: 100%;
-        height: 5px;
+        height: 4px;
+        border-radius: 25%;
         top: 200%;
         right: 0;
-        background-color: black;
+        background-color: #161616;
         transition: all 0.8s; }
   .navbarr .active span {
     transform: rotate(180deg); }
@@ -6512,6 +6521,7 @@ body {
   .navbarr .cont {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     height: 30px;
     width: 80%;
     margin: 0 auto; }
@@ -6519,7 +6529,9 @@ body {
       .navbarr .cont {
         display: none; } }
     .navbarr .cont a {
-      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       height: 30px;
       width: 15%;
       font-size: 1.5rem;
@@ -6534,7 +6546,7 @@ body {
         font-size: 2rem;
         color: blue;
         float: right;
-        transition: all 0.4s; }
+        transition: all 1.5s; }
       .navbarr .cont .iconsCont .close {
         position: absolute;
         display: block;
@@ -6542,15 +6554,15 @@ body {
         float: right;
         font-size: 2rem;
         color: blue;
-        transform: rotate(90deg);
         opacity: 0;
-        transition: all 0.4s; }
+        transition: all 1.5s;
+        transform: scale(0); }
       .navbarr .cont .iconsCont .active2 {
-        transform: rotate(90deg);
+        transform: scale(0);
         opacity: 0; }
       .navbarr .cont .iconsCont .active3 {
-        transform: rotate(0deg);
-        opacity: 3; }
+        transform: scale(1);
+        opacity: 1; }
   .navbarr .logInOuterWraper {
     position: absolute;
     width: 300px;
@@ -6590,6 +6602,24 @@ body {
         padding-left: 10px; }
     .navbarr .logInOuterWraper .active1 {
       opacity: 1; }
+  .navbarr .brand {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 250px;
+    height: 100px; }
+    .navbarr .brand .logo {
+      display: block;
+      width: 200px;
+      height: 40px;
+      font-size: 3rem;
+      padding: 0; }
+    .navbarr .brand .subLogo {
+      display: block; }
+    .navbarr .brand-side {
+      width: 100%;
+      height: 10%; }
 
 .side-nav {
   padding: 10px;
@@ -6599,7 +6629,8 @@ body {
   transform: translateX(-300px);
   transition: all 0.5s;
   position: absolute;
-  z-index: 99999;
+  position: fixed;
+  z-index: 8888;
   background-color: white; }
   .side-nav .side_a {
     display: block;
@@ -6613,21 +6644,14 @@ body {
     .side-nav .side_a:hover {
       background-color: #1100ff;
       color: white; }
-  .side-nav .brand {
-    display: inline-block;
-    width: 100%;
-    height: 10%;
-    background-image: url(../assets/img/apartmentCarousel3.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; }
 
 .active {
   transform: translateX(0px); }
 
 .myCarousel {
   position: relative;
-  width: 100%; }
+  width: 100%;
+  margin-top: 100px; }
   .myCarousel .carouselDiv {
     height: 400px; }
     .myCarousel .carouselDiv--1 {
@@ -6968,7 +6992,10 @@ body {
     .footer a:hover {
       color: #e60028; }
   .footer i {
-    margin-right: 3px; }
+    margin-right: 3px;
+    color: #e60028; }
+  .footer .social {
+    color: #5e5b5b; }
 
 .test {
   height: 100px;

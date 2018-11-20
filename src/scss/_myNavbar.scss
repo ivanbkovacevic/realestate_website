@@ -1,115 +1,126 @@
 .navbarr {
-    position: relative;
+    position: fixed;
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 100px;
     border: 1px solid red;
+    background-color: white;
     width: 100%;
+    top: 0;
     padding: 20px 30px;
+    z-index: 9999;
 
-    .brand{
-        display: inline-block;
-        width: 20%;
-        height: 80%;
-        background-image: url(../assets/img/apartmentCarousel3.jpeg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+    @include media-breakpoint-down(md) {
+        justify-content: flex-start;
     }
 
-    .toogleIcon{
+
+    .toogleIcon {
         display: none;
 
-            @include media-breakpoint-down(md) {
-                display: block;
-            }
+        @include media-breakpoint-down(md) {
+            display: block;
+        }
 
         float: left;
-        width: 50px;
-        height: 50px;
-        padding: 5px;
-        border: 1px solid black;
+        width: 35px;
+        height: 35px;
+        padding: 4px;
+        margin-right: 10px;
+        border: 1px solid  $color-black-medium;
 
-        span{
+        span {
             position: relative;
             content: '-';
             display: block;
             width: 90%;
-            height: 5px;
-            margin-top: 45%;
-            background-color: black;
+            height: 4px;
+            border-radius: 25%;
+            margin-top: 38%;
+         
+            background-color: $color-black-medium;
             transition: all 0.8s;
-          
-            &::before{
+
+            &::before {
                 position: absolute;
                 content: ' ';
                 display: block;
                 width: 100%;
-                height: 5px;
+                height: 4px;
+                border-radius: 25%;
                 bottom: 200%;
                 right: 0;
-                background-color: black;
+                background-color:  $color-black-medium;
                 transition: all 0.8s;
             }
-    
-            
-            &::after{
+
+
+            &::after {
                 position: absolute;
                 content: ' ';
                 display: block;
                 width: 100%;
-                height: 5px;
+                height: 4px;
+                border-radius: 25%;
                 top: 200%;
                 right: 0;
-                background-color: black;
+                background-color:  $color-black-medium;
                 transition: all 0.8s;
             }
-//////////////////////////////////////////
-        }    
-    }
-        .active{ /// active class for arrow icon
-            
-            span{
-                transform: rotate(180deg);
-            }
-    
-            span::before{
-                width: 60%;
-                transform-origin: 100% 50%;
-                bottom: 0%;
-                right: 0%;
-                transform: rotate(40deg);
-            }
-    
-            span::after{
-                width: 60%;
-                top: 0%;
-                right: 0%;
-                transform-origin: 100% 50%;
-                transform: rotate(-40deg) ;
-            }
+
+            //////////////////////////////////////////
         }
-      
+    }
+
+    .active {
+        /// active class for arrow icon
+
+        span {
+            transform: rotate(180deg);
+        }
+
+        span::before {
+            width: 60%;
+            transform-origin: 100% 50%;
+            bottom: 0%;
+            right: 0%;
+            transform: rotate(40deg);
+        }
+
+        span::after {
+            width: 60%;
+            top: 0%;
+            right: 0%;
+            transform-origin: 100% 50%;
+            transform: rotate(-40deg);
+        }
+    }
+
     .cont {
         @include media-breakpoint-down(md) {
             display: none;
         }
 
-      display: flex;
-      justify-content: space-evenly;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
         height: 30px;
         width: 80%;
         margin: 0 auto;
 
         a {
-            display: inline-block;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
             height: 30px;
             width: 15%;
             font-size: 1.5rem;
             text-align: center;
         }
 
-        .iconsCont{
+        .iconsCont {
             position: relative;
             display: flex;
             justify-content: center;
@@ -120,34 +131,36 @@
                 font-size: 2rem;
                 color: blue;
                 float: right;
-                transition: all 0.4s;
+                transition: all 1.5s;
             }
 
-            .close{
+            .close {
                 position: absolute;
                 display: block;
                 left: 40%;
                 float: right;
                 font-size: 2rem;
                 color: blue;
-                transform: rotate(90deg);
                 opacity: 0;
-                transition: all 0.4s;
+                transition: all 1.5s;
+                transform: scale(0);
             }
-            .active2{
-                transform: rotate(90deg);
+
+            .active2 {
+                transform: scale(0);
                 opacity: 0;
             }
-            .active3{
-                transform: rotate(0deg);
-                opacity: 3;
+
+            .active3 {
+                transform: scale(1);
+                opacity: 1;
             }
         }
 
-    
+
 
     }
-
+//////////////////// LOG IN ////////////////////////////////////
     .logInOuterWraper {
         position: absolute;
         width: 300px;
@@ -157,7 +170,7 @@
         top: 80%;
         z-index: 7777;
         overflow: hidden;
-      
+
 
 
         .logInBackGround {
@@ -171,12 +184,12 @@
             transform: scale(0);
             transform-origin: 100% 0%;
             z-index: 8888;
-          
+
         }
 
-    .active {
+        .active {
             transform: scale(1.3);
-    }
+        }
 
         .logIn {
             position: relative;
@@ -198,9 +211,37 @@
 
         }
 
-      .active1{
-          opacity: 1;
-      }  
+        .active1 {
+            opacity: 1;
+        }
+    }
+
+    ////////////////////////BRAND#####################3
+    .brand {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        width: 250px;
+        height: 100px;
+
+        .logo {
+            display: block;
+            width: 200px;
+            height: 40px;
+            font-size: 3rem;
+            padding: 0;
+        }
+
+        .subLogo{
+            display: block;
+
+        }
+
+        &-side {
+            width: 100%;
+            height: 10%;
+        }
     }
 }
 
@@ -215,7 +256,8 @@
     transform: translateX(-300px);
     transition: all 0.5s;
     position: absolute;
-    z-index: 99999;
+    position: fixed;
+    z-index: 8888;
     background-color: white;
 
     .side_a {
@@ -228,21 +270,14 @@
         font-size: 1.5rem;
         padding: 5px;
 
+
         &:hover {
             background-color: rgb(17, 0, 255);
             color: white;
         }
     }
 
-    .brand{
-        display: inline-block;
-        width: 100%;
-        height: 10%;
-        background-image: url(../assets/img/apartmentCarousel3.jpeg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+
 }
 
 .active {
