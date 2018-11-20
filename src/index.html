@@ -18,7 +18,11 @@
   <!--START NAVBAR ############################-->
 
     <nav class="navbarr"> 
-        <span id="open" class="open-slide"><i class="fas fa-bars"></i></span>
+        <!-- <span id="open" class="open-slide"><i class="fas fa-bars"></i></span> -->
+        <div class="brand d-none d-lg-inline-block"></div>
+        <div id="open" class="toogleIcon">
+        <span></span>
+        </div>
           <div class="cont">
             <a href="#">Home</a>
             <a href="#">About</a>
@@ -26,11 +30,27 @@
             <a href="#">Pages</a>
             <a href="#">Apartments</a>
             <a href="#">Contacts</a>
+            <div id="iconsCont" class="iconsCont">
+                <i id="user" class="fas fa-user"></i>
+                <i id="close" class="fas fa-times close"></i>
+            </div>
+          
           </div>
+          <div class="logInOuterWraper">    
+                <div id="logIn" class="logIn">
+                    <input type="text" placeholder="name">
+                    <input type="email" placeholder="email">
+                    <button type="submit" class="myButton__1">Log in</button>
+                  </div>
+                  <div id="logInBackGround" class="logInBackGround">
+                   </div>
+          
+          </div>
+       
       </nav>
 
       <div id="side-menu" class="side-nav">
-      
+          <div class="brand d-block d-lg-none"></div>
           <a href="#" class="side_a">Home</a>
           <a href="#" class="side_a">About</a>
           <a href="#" class="side_a">Services</a>

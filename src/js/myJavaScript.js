@@ -125,7 +125,24 @@ $(document).ready(function(){
          /////////////NAVBAR ################33
          $('#open').click(function(){
              $('#side-menu').toggleClass('active');
-         })
+             $('.toogleIcon').toggleClass('active');
+         });
+
+        //  $('#user').click(function(){
+        //     $('#logInBackGround').toggleClass('active');
+        //  });
+
+        //  $('#user').click(function(){
+        //     $('#logIn').toggleClass('active1');
+        //  });
+
+         
+         $('#iconsCont').click(function(){
+            $('#user').toggleClass('active2');
+            $('#close').toggleClass('active3');
+            $('#logInBackGround').toggleClass('active');
+            $('#logIn').toggleClass('active1');
+         });
 
         
 })

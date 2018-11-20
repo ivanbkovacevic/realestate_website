@@ -6,14 +6,29 @@
     overflow: hidden;
     margin-top: 50px;
 
+    @include media-breakpoint-down(md) {
+        padding: 20px;
+    }
+    @include media-breakpoint-down(xs) {
+        padding: 5px;
+    }
+
     h1{
-      
         font-size: 5rem;
         color: white;
         text-align: center;
         margin-bottom: 60px;
         font-weight: bold;
         z-index: 222;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 40px;
+            font-size: 3rem;
+        }
+        @include media-breakpoint-down(xs) {
+            margin-bottom: 3px;
+            font-size: 2rem;
+        }
     }
 
    
@@ -37,17 +52,29 @@
 
     .paragraf{
         position: absolute;
-        top: 14%;
+        top: 10%;
         left: 42%;
         font-size: 4rem;
         font-weight: bold;
         color: white;
+        margin: 0;
+        @include media-breakpoint-down(md) {
+            left: 45%;
+        }
+        @include media-breakpoint-down(xs) {
+            font-size: 2.5rem;
+            top: 16%;
+            left: 47%;
+        }
     }
 
     p{
         font-size: 2rem;
         color: white;
         font-weight: bold;
+        @include media-breakpoint-down(xs) {
+            font-size: 1.3rem;
+        }
     }
 
  
@@ -58,6 +85,14 @@
         border: 2px solid white;
         margin-bottom: 40px;
         transition: all 0.3s;
+        @include media-breakpoint-down(md) {
+            margin-bottom: 20px;
+        }
+        @include media-breakpoint-down(xs) {
+            margin-bottom: 10px;
+            width: 80px;
+            height: 80px;
+        }
       
     }
 }
