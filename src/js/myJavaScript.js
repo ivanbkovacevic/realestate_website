@@ -3,82 +3,106 @@ $(document).ready(function(){
     var myInt2=null;
     var myInt3=null;
     var w = window.innerWidth;
-    $('.scroll').on('click', function() { 
-        var x1=1000;
-         myInt1= setInterval(myCounter1,8);
-        function myCounter1(){
-            x1+=23;
-            if(x1>7234 ){
-                clearInterval(myInt1);
-            }
-            $('#broj1').text(x1);                          
-        }
+    
+      
 
-        var x2=1000;
-        myInt2= setInterval(myCounter2,8);
-       function myCounter2(){
-           x2+=33;
-           if(x2>4234 ){
-               clearInterval(myInt2);
-           }
-           $('#broj2').text(x2);                          
-       }
+     $('.ourAdvantages').one('mouseenter',function(){
+        var x1=1;
+        myInt1= setInterval(myCounter1,8);
+       function myCounter1(){   
+           if(x1>72 ){
+               clearInterval(myInt1);
+           }else{
+            x1+=1;    
+            $('#rectangle1').text(x1);   
+           }              
+        };
 
-       var x3=1000;
-       myInt3= setInterval(myCounter3,8);
-      function myCounter3(){
-          x3+=43;
-          if(x3>5234 ){
-              clearInterval(myInt3);
-          }
-          $('#broj3').text(x3);                          
-      }
+       var x2=1;
+       myInt2= setInterval(myCounter2,8);
+      function myCounter2(){   
+          if(x2>85 ){
+              clearInterval(myInt2);
+          }else{
+           x2+=1;    
+           $('#rectangle2').text(x2);   
+          }              
+      }  
+
+      var x3=1;
+      myInt3= setInterval(myCounter3,8);
+     function myCounter3(){   
+         if(x3>65 ){
+             clearInterval(myInt3);
+         }else{
+          x3+=1;    
+          $('#rectangle3').text(x3);   
+         }              
+     } 
+
+     var x4=1;
+     myInt4= setInterval(myCounter4,8);
+    function myCounter4(){   
+        if(x4>55 ){
+            clearInterval(myInt4);
+        }else{
+         x4+=1;    
+         $('#rectangle4').text(x4);   
+        }              
+    } 
+
+
+     });
+
+    //     var x1=1000;
+    //      myInt1= setInterval(myCounter1,8);
+    //     function myCounter1(){
+    //         x1+=23;
+    //         if(x1>7234 ){
+    //             clearInterval(myInt1);
+    //         }
+    //         $('#broj1').text(x1);                          
+    //     }
+
+    //     var x2=1000;
+    //     myInt2= setInterval(myCounter2,8);
+    //    function myCounter2(){
+    //        x2+=33;
+    //        if(x2>4234 ){
+    //            clearInterval(myInt2);
+    //        }
+    //        $('#broj2').text(x2);                          
+    //    }
+
+    //    var x3=1000;
+    //    myInt3= setInterval(myCounter3,8);
+    //   function myCounter3(){
+    //       x3+=43;
+    //       if(x3>5234 ){
+    //           clearInterval(myInt3);
+    //       }
+    //       $('#broj3').text(x3);                          
+    //   }
         
-        $('html, body').animate({scrollTop: $(this.hash).offset().top - 145}, 1000);
-        return false;     
-    });
+        // $('html, body').animate({scrollTop: $(this.hash).offset().top - 145}, 1000);
+        // return false;     
+  
+/////////////////////////////////////////////////////////////////////
 
+    // $(window).scroll(function(){
+    //     var scroll=$(window).scrollTop();
+    //        console.log(scroll);
 
-
-    $(window).scroll(function(){
-        var scroll=$(window).scrollTop();
-           console.log(scroll);
-
-            if(scroll >= 1299 ){
-                $('#rollRed').addClass("rollRed");
-                $('#rollGray').addClass("rollGrayAnim");
-                $('#rollRed').removeClass("rollGray");
-            }
+    //         if(scroll >= 1200 ){
+    //             $('#rectangle1').text("55");
+    //             $('#rectangle2').text("66");
+    //             $('#rectangle3').text("77");
+    //             $('#rectangle4').text("88");
+    //         }
         
-            if(scroll >= 3000){
-                $('#redBox2').addClass("redBox2");
-                $('#rollGray2').addClass("rollGrayAnim2");
-                $('#rollGray2').removeClass("rollGray2");
+    //     });
 
-            }
-
-            if(scroll >= 3000){
-                if(w>576){
-                    $('.wraper3').css('display','block');
-                    $('#wraper3').addClass("wraper3");
-                }
-              
-            }
-
-            if(scroll >= 3800){
-                if(w>767){
-                $('#sec6-col1').addClass('apear');
-                setTimeout(function() {
-                 $('#sec6-col2').addClass('apear');
-             }, 300);
-             setTimeout(function() {
-                 $('#sec6-col3').addClass('apear');
-             }, 600);
-               
-             }
-            }
-         
-        });
+        ///////////////////////////////////////////////////////////////
 
         $("#pisiteNam").click(function(){
             $("#myForm2").slideDown("slow");
@@ -127,14 +151,6 @@ $(document).ready(function(){
              $('#side-menu').toggleClass('active');
              $('.toogleIcon').toggleClass('active');
          });
-
-        //  $('#user').click(function(){
-        //     $('#logInBackGround').toggleClass('active');
-        //  });
-
-        //  $('#user').click(function(){
-        //     $('#logIn').toggleClass('active1');
-        //  });
 
          
          $('#iconsCont').click(function(){

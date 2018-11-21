@@ -1,0 +1,60 @@
+.apartmentStyles {
+    position: relative;
+   
+   padding: 0 100px;
+
+    .backDrop {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.486);
+        position: absolute;
+
+    }
+
+    height: 650px;
+    margin-top: 150px;
+    background-image: url(../assets/img/about2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    h1 {
+        position: relative;
+        color: white;
+        font-size: 5rem;
+        padding: 130px 0;
+        text-align: center;
+        z-index: 9999;
+    }
+
+    p{
+        color: white;
+        font-size: 2rem;
+    }
+
+    .image {
+        height: 200px;
+        width: 100%;
+
+        &__1 {
+            background-image: url(../assets/img/apartmentCarousel1.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &__2 {
+            background-image: url(../assets/img/apartmentCarousel2.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &__3 {
+            background-image: url(../assets/img/apartmentCarousel3.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}

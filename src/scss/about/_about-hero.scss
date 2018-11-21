@@ -1,0 +1,34 @@
+.about{
+  
+    .hero{
+        padding: 100px;
+        overflow: hidden;
+
+        h1{
+            font-size: 5rem;
+            font-weight: bold;
+            padding: 100px;
+            text-align: center;
+        }
+
+        h2{
+            color: blue;
+            font-size: 2rem;
+        }
+
+        p{
+            font-size: 1.5rem;
+            color: $color-gray-dark;
+        }
+      
+        .imageBckg{
+            height: 250px;
+            background-image: url(../assets/img/sittingpeople2psd.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+           
+        }
+   
+    }
+}
