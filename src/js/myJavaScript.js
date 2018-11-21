@@ -4,8 +4,6 @@ $(document).ready(function(){
     var myInt3=null;
     var w = window.innerWidth;
     
-      
-
      $('.ourAdvantages').one('mouseenter',function(){
         var x1=1;
         myInt1= setInterval(myCounter1,8);
@@ -87,20 +85,21 @@ $(document).ready(function(){
         // $('html, body').animate({scrollTop: $(this.hash).offset().top - 145}, 1000);
         // return false;     
   
-/////////////////////////////////////////////////////////////////////
+//////////////////////NAVIGATION TOP BUTTON///////////////////////////////////////////////
 
-    // $(window).scroll(function(){
-    //     var scroll=$(window).scrollTop();
-    //        console.log(scroll);
+    $(window).scroll(function(){
+        var scroll=$(window).scrollTop();
+           console.log(scroll);
 
-    //         if(scroll >= 1200 ){
-    //             $('#rectangle1').text("55");
-    //             $('#rectangle2').text("66");
-    //             $('#rectangle3').text("77");
-    //             $('#rectangle4').text("88");
-    //         }
+            if(scroll > 400 ){
+                $('.navigationArrow').addClass("showUp");
+                $('.navigationArrow').removeClass("hideDown");
+            }else if(scroll < 400){
+                $('.navigationArrow').addClass("hideDown");
+                $('.navigationArrow').removeClass("showUp");
+            }
         
-    //     });
+        });
 
         ///////////////////////////////////////////////////////////////
 

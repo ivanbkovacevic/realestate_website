@@ -28,7 +28,7 @@
         height: 35px;
         padding: 4px;
         margin-right: 10px;
-        border: 1px solid  $color-black-medium;
+        border: 1px solid $color-black-medium;
 
         span {
             position: relative;
@@ -38,7 +38,7 @@
             height: 4px;
             border-radius: 25%;
             margin-top: 38%;
-         
+
             background-color: $color-black-medium;
             transition: all 0.8s;
 
@@ -51,7 +51,7 @@
                 border-radius: 25%;
                 bottom: 200%;
                 right: 0;
-                background-color:  $color-black-medium;
+                background-color: $color-black-medium;
                 transition: all 0.8s;
             }
 
@@ -65,7 +65,7 @@
                 border-radius: 25%;
                 top: 200%;
                 right: 0;
-                background-color:  $color-black-medium;
+                background-color: $color-black-medium;
                 transition: all 0.8s;
             }
 
@@ -160,61 +160,73 @@
 
 
     }
-//////////////////// LOG IN ////////////////////////////////////
-    .logInOuterWraper {
+
+    //////////////////// LOG IN ////////////////////////////////////
+    // .logInOuterWraper {
+    //     position: absolute;
+    //     width: 300px;
+    //     height: 350px;
+    //     background-color: transparent;
+    //     right: 5%;
+    //     top: 80%;
+    //     z-index: 7777;
+    //     overflow: hidden;
+
+
+
+    //     .logInBackGround {
+    //         position: absolute;
+    //         top: 0%;
+    //         width: 300px;
+    //         height: 350px;
+    //         background-color: white;
+    //         border-bottom-left-radius: 50%;
+    //         transition: all 0.3s;
+    //         transform: scale(0);
+    //         transform-origin: 100% 0%;
+    //         z-index: 8888;
+
+    //     }
+
+
+    .logIn {
         position: absolute;
+        display: block;
+        padding: 70px 20px 0 20px;
+        top: 90%;
+        right: 1%;
         width: 300px;
         height: 350px;
-        background-color: transparent;
-        right: 5%;
-        top: 80%;
-        z-index: 7777;
-        overflow: hidden;
+        transform: scale(0);
+        transform-origin: 100% 0;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-top-left-radius: 50%;
+        z-index: 9999;
+        opacity: 1;
+        border: 1px solid rgba(146, 143, 143, 0.712);
+        background-color: white;
+        transition: all 0.7s;
 
-
-
-        .logInBackGround {
-            position: absolute;
-            top: 0%;
-            width: 300px;
-            height: 350px;
-            background-color: white;
-            border-bottom-left-radius: 50%;
-            transition: all 0.3s;
-            transform: scale(0);
-            transform-origin: 100% 0%;
-            z-index: 8888;
-
+        input {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+            padding-left: 10px;
         }
 
-        .active {
-            transform: scale(1.3);
-        }
-
-        .logIn {
-            position: relative;
-            padding: 70px 20px 0 20px;
-            width: 300px;
-            height: 350px;
-            transition: all 0.3s;
-            z-index: 9999;
-            opacity: 0;
-            border: 1px solid rgba(146, 143, 143, 0.712);
-
-            input {
-                width: 100%;
-                height: 40px;
-                margin-bottom: 30px;
-                font-size: 1.5rem;
-                padding-left: 10px;
-            }
-
-        }
-
-        .active1 {
-            opacity: 1;
-        }
     }
+
+    .active1 {
+        transform: scale(1);
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+        border-top-left-radius: 0%;
+        display: block;
+
+    }
+
 
     ////////////////////////BRAND#####################3
     .brand {
@@ -233,7 +245,7 @@
             padding: 0;
         }
 
-        .subLogo{
+        .subLogo {
             display: block;
 
         }

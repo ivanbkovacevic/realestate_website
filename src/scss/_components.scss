@@ -110,3 +110,19 @@
     border: none;
     outline: none;
 }
+
+.navigationArrow{
+    position: fixed;
+    bottom: -10%;
+    right: 3%;
+    font-size: 6rem;
+    color:red;
+    z-index: 9999;
+    transition: all 0.5s;
+}
+.showUp{
+    bottom: 5%;
+}
+.hideDown{
+    bottom: -10%;
+}

@@ -1,0 +1,24 @@
+.banner1 {
+    height: 450px;
+    background-image: url(../assets/img/about3.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px;
+
+    h1 {
+        font-weight: bold;
+        display: block;
+        color: white;
+        width: 60%;
+        text-align: center;
+        margin:0 auto;
+        margin-bottom: 60px;
+    }
+    button{
+        display: block;
+        padding: 0 15px;
+        width: 200px;
+        margin:0 auto;
+    }
+}
