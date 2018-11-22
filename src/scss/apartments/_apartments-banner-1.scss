@@ -12,8 +12,17 @@
         color: white;
         width: 60%;
         text-align: center;
+        text-shadow: 2px 2px 9px rgba(0,0,0,0.65);
         margin:0 auto;
         margin-bottom: 60px;
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+
+        @include media-breakpoint-down(xs) {
+            width: 100%;
+            font-size: 3rem;
+        }
     }
     button{
         display: block;

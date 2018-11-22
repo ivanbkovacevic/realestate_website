@@ -2,6 +2,9 @@
     position: relative;
    
    padding: 0 100px;
+   @include media-breakpoint-down(xs) {
+    padding: 10px;
+}
 
     .backDrop {
         height: 100%;
@@ -20,13 +23,30 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    @include media-breakpoint-down(md) {
+        height: 900px;
+    }
+    @include media-breakpoint-down(xs) {
+        height: 800px;
+        padding: 10px 20px;
+    }
+
     h1 {
         position: relative;
         color: white;
         font-size: 5rem;
         padding: 130px 0;
         text-align: center;
-        z-index: 9999;
+        z-index: 777;
+
+        @include media-breakpoint-down(md) {
+            padding: 20px;
+        }
+
+        @include media-breakpoint-down(xs) {
+            padding: 10px;
+            font-size: 3rem;
+        }
     }
 
     p{

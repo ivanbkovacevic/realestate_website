@@ -1,10 +1,17 @@
 .meetOurTeam{
     padding: 100px;
+
+    @include media-breakpoint-down(md) {
+        padding: 10px 50px;
+    }
     h1{
         font-size: 5rem;
         font-weight: bold;
         text-align: center;
         padding: 80px;
+        @include media-breakpoint-down(md) {
+            padding: 10px;
+        }
     }
 
 

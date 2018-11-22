@@ -1,19 +1,36 @@
 .about{
-  
+    background-color: white;
     .hero{
-        padding: 100px;
+        padding: 0 100px;
         overflow: hidden;
+        background-color: white;
+        @include media-breakpoint-down(md) {
+            padding: 10px 100px;
+        }
+        @include media-breakpoint-down(xs) {
+            padding: 10px;
+        }
 
         h1{
             font-size: 5rem;
             font-weight: bold;
-            padding: 100px;
+            margin-top: 110px;
+            margin-bottom: 50px;
             text-align: center;
+            @include media-breakpoint-down(md) {
+                font-size: 3rem;
+                padding: 50px;
+            }
+           
         }
 
         h2{
             color: blue;
             font-size: 2rem;
+            @include media-breakpoint-down(md) {
+                 margin-top: 15px;
+            }
+          
         }
 
         p{

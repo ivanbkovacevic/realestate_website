@@ -60,10 +60,7 @@
     }
    
     .mySpan {
-      
             z-index: 99999;
-            // left: 0;
-       
 
         &::before {
             content: "";
@@ -114,7 +111,7 @@
 .navigationArrow{
     position: fixed;
     bottom: -10%;
-    right: 3%;
+    right: 2%;
     font-size: 6rem;
     color:red;
     z-index: 9999;
