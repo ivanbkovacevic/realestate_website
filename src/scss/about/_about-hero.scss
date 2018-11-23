@@ -8,7 +8,7 @@
             padding: 10px 100px;
         }
         @include media-breakpoint-down(xs) {
-            padding: 10px;
+            padding: 30px;
         }
 
         h1{
@@ -40,7 +40,7 @@
       
         .imageBckg{
             height: 250px;
-            background-image: url(../assets/img/sittingpeople2psd.jpg);
+            background-image: url(../assets/img/whoweare.jpeg);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;

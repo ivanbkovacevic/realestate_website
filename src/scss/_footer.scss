@@ -6,6 +6,7 @@
     height: 160px;
     background-color: $color-gray-light;
     font-size: 1.5rem;
+    padding: 0 80px 0 10px;
    
 
     a{
@@ -28,40 +29,4 @@
         color: $color-gray-dark;
     }
 
-}
-
-.test{
-    height: 100px;
-    width: 100px;
-    color: aliceblue;
-    text-align: center;
-    padding: 40px;
-    margin-left: 100px;
-
-    &__1{
-        position: relative;
-        background-color: red;
-        z-index: 2;
-        opacity: 0.99;
-       
-
-    }
-    &__2{
-        position: relative;
-        background-color: blue;
-        margin-top: -20px;
-        margin-left: 120px;
-        opacity: 0.99;
-       
-        z-index: 1;
-    }
-    &__3{
-        // position: relative;
-        background-color: green;
-        margin-top: -20px;
-        margin-left: 140px;
-       
-        // z-index: 2;
-       
-    }
 }
