@@ -123,3 +123,118 @@
 .hideDown{
     bottom: -10%;
 }
+
+//////////////////// ANIMATION  ///////////////////////
+
+.introAnimContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: cornflowerblue;
+    width: 200px;
+    height: 200px;
+    z-index: 99999;
+    perspective: 1500px;
+   
+
+    &:hover .intro__front{
+        transform: rotateY(180deg);
+    }
+
+    &:hover .intro__back{
+        transform: rotateY(0deg);
+     }
+
+    .intro{
+        text-align: center;
+        font-size: 3rem;
+ 
+        &__front{
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 150px;
+            height: 200px;
+            background-color: red;
+            color: aliceblue;
+            transition: all 3s ease;
+            backface-visibility: hidden;
+            z-index: 2; 
+           
+            .iconTitle{
+                position: absolute;
+                top: 40%;
+                left: 40%;
+                padding: 2px 20px;
+                font-size: 3rem;
+                color: white;
+                box-shadow: 2px 12px 21px 2px black;
+                background-color: chartreuse;
+                transform: translateZ(70px);
+                text-shadow: 2px 2px 2px black;
+              
+                transition: all 3s;
+                z-index: 3;
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 40%;
+                    left: 40%;
+                    padding: 2px 20px;
+                    font-size: 3rem;
+                    color: white;
+                    box-shadow: 2px 12px 21px 2px black;
+                    background-color: darken(chartreuse,30%);
+                    transform: translateZ(70px);
+                    text-shadow: 2px 2px 2px black;
+                 
+                    transition: all 3s ease;
+                    z-index: 3;
+                }
+            }  
+        }
+
+        &__back{
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 150px;
+            height: 200px;
+            background-color: darken(red,30%);
+            color: aliceblue;
+            transform: rotateY(-180deg);
+            transition: all 3s;
+            backface-visibility: hidden;
+            z-index: 2;
+     
+        }
+
+    }
+}
+
+@keyframes introAnimFront{
+    0%{
+        transform: rotateY(0deg);
+    }
+    50%{
+        z-index: 1;
+    }
+  
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes introAnimBack{
+    0%{
+        transform: rotateY(0deg);
+    }
+    50%{
+        z-index: 2;
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
