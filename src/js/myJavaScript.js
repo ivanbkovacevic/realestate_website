@@ -48,48 +48,19 @@ $(document).ready(function(){
          $('#rectangle4').text(x4);   
         }              
     } 
-
-
      });
 
-    //     var x1=1000;
-    //      myInt1= setInterval(myCounter1,8);
-    //     function myCounter1(){
-    //         x1+=23;
-    //         if(x1>7234 ){
-    //             clearInterval(myInt1);
-    //         }
-    //         $('#broj1').text(x1);                          
-    //     }
-
-    //     var x2=1000;
-    //     myInt2= setInterval(myCounter2,8);
-    //    function myCounter2(){
-    //        x2+=33;
-    //        if(x2>4234 ){
-    //            clearInterval(myInt2);
-    //        }
-    //        $('#broj2').text(x2);                          
-    //    }
-
-    //    var x3=1000;
-    //    myInt3= setInterval(myCounter3,8);
-    //   function myCounter3(){
-    //       x3+=43;
-    //       if(x3>5234 ){
-    //           clearInterval(myInt3);
-    //       }
-    //       $('#broj3').text(x3);                          
-    //   }
-        
-        // $('html, body').animate({scrollTop: $(this.hash).offset().top - 145}, 1000);
-        // return false;     
+  
   
 //////////////////////NAVIGATION TOP BUTTON///////////////////////////////////////////////
 
     $(window).scroll(function(){
         var scroll=$(window).scrollTop();
            console.log(scroll);
+           var vrednost = $('#inlineFormInputName2').val();
+           console.log(vrednost+' vrednost'); 
+           var vrednost1 = $('#inlineFormCustomSelectPref').val();
+           console.log(vrednost1+' vrednost1'); 
 
             if(scroll > 400 ){
                 $('.navigationArrow').addClass("showUp");
