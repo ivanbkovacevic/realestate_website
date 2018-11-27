@@ -249,26 +249,56 @@
     // background-color: rgba(127, 255, 212, 0.575);
      z-index: 10;
      perspective: 500px;
+    
 
      &:hover .coin{
-         transform: rotateY(90deg); 
+         transform: rotateY(90deg);   
+     }
+     &:hover .coin__shadow--1{
+       opacity: 0;
      }
     
 
      .coin{
         position: absolute;
+        content: icon;
         top: 20%;
         left: 20%;
         width: 200px;
         height: 200px;
         border-radius: 50%;
         z-index: 20;
-     //   background-image: url(../assets/img/profile.jpg);
         background-color: orange;
         background-size: cover;
         background-position: 50% 10%;
         transition: all 6s;
         transform-style: preserve-3d;
+      
+        &__shadow--1{
+            position: absolute;
+            top: 180%;
+            left: 30%;
+            width: 100px;
+            height: 2px;
+            border-radius: 50%;
+            z-index: 20;
+            transition: all 6s;
+            background-color: rgba(0, 0, 0, 0.4);
+            box-shadow: 5px 5px 20px 20px rgba(0, 0, 0, 0.4);
+        }
+        &__shadow--2{
+            position: absolute;
+            top: 180%;
+            left: 30%;
+            width: 100px;
+            height: 6px;
+            border-radius: 50%;
+            z-index: 20;
+            transition: all 6s;
+            background-color: rgba(0, 0, 0, 0.4);
+            box-shadow: 5px 5px 20px 20px rgba(0, 0, 0, 0.4);
+            transform: rotateX(90deg);
+        }
 
 
        &::before{

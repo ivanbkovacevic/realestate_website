@@ -15,9 +15,9 @@
 </head>
 
 <body>
-  <div class="introAnimContainer">
+  <!-- <div class="introAnimContainer">
       <div class="intro intro__front">
-          <!-- <div class="iconTitle">Title</div> -->
+           <div class="iconTitle">Title</div> 
          PERA NAPRED
       </div>
       <div class="intro intro__back">
@@ -26,8 +26,11 @@
   </div>
  <div class="coinCont">
    <div class="coin">
+     <div class="coin__shadow">
+
+     </div>
    </div>
- </div>
+ </div> -->
     
   <!--START NAVBAR ############################-->
   <div id="navTop" class="navTop"></div>
@@ -44,7 +47,7 @@
           <div class="cont">
             <a href="#">Home</a>
             <a href="about.html">About</a>
-          
+            <a href="search_results.html">Search results</a>
             <a href="apartments.html">Apartments</a>
             <a href="contact-us.html">ContactUs</a>
             <div id="iconsCont" class="iconsCont">
@@ -65,6 +68,7 @@
       <div id="side-menu" class="side-nav">
           <div class="brand-side d-block d-lg-none">RENTASPACE</div>
           <a href="#" class="side_a">Home</a>
+          <a href="search_results.html" class="side_a">Search results</a>
           <a href="about.html" class="side_a">About</a>
           <a href="apartments.html" class="side_a">Apartments</a>
           <a href="contact-us.html" class="side_a">ContactUs</a>
@@ -113,10 +117,10 @@
       <form>
       <div class="row no-gutters">
         <div class="col-lg-3">
-          <input type="text" class="form-control" id="inlineFormInputName2" placeholder="Looocation">
+          <input type="text" class="form-control" id="location" placeholder="Looocation">
         </div>
         <div class="col-lg-2">
-          <select class="custom-select" id="inlineFormCustomSelectPref">
+          <select class="custom-select" id="propertyType">
             <option selected>Property Type</option>
             <option value="Residential">Residential</option>
             <option value="Commercial">Commercial</option>
@@ -124,15 +128,15 @@
           </select>
         </div>
         <div class="col-lg-2">
-          <select class="custom-select" id="inlineFormCustomSelectPref">
+          <select class="custom-select" id="listingType">
             <option selected>Listing Type</option>
-            <option value="1">Exclusive Right to Sell</option>
-            <option value="2">Exlusive Agency</option>
-            <option value="3">Open Agency</option>
+            <option value="Exclusive Right to Sell">Exclusive Right to Sell</option>
+            <option value="Exlusive Agency">Exlusive Agency</option>
+            <option value="Open Agency">Open Agency</option>
           </select>
         </div>
         <div class="col-lg-2">
-          <select class="custom-select" id="inlineFormCustomSelectPref">
+          <select class="custom-select" id="noOfBedrooms">
             <option selected>No. of Bedrooms</option>
             <option value="1">1 Bedroom</option>
             <option value="2">2 Bedroom</option>
@@ -140,7 +144,7 @@
           </select>
         </div>
         <div class="col-lg-2">
-            <button type="submit" class="myButton"><span class="mySpan">Search</span></button>
+            <button type="button" id="BtnSubmit" class="myButton"><span class="mySpan">Search</span></button>
         </div>
         </form>
       </div>
