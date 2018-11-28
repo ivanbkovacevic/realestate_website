@@ -4,6 +4,10 @@ $(document).ready(function () {
     var myInt3 = null;
     var w = window.innerWidth;
 
+    fetch('../assets/generated.json')
+    .then(response => response.json())
+    .then(json => console.log(json));
+
     $('.ourAdvantages').one('mouseenter', function () {
         var x1 = 1;
         myInt1 = setInterval(myCounter1, 8);
