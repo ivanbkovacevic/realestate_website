@@ -4,9 +4,47 @@ $(document).ready(function () {
     var myInt3 = null;
     var w = window.innerWidth;
 
+    var searchResults = [];
     fetch('../assets/generated.json')
-    .then(response => response.json())
-    .then(json => console.log(json));
+        .then(response => response.json())
+        .then(json => {
+            console.log(json);
+            for (let i in json) {
+                if (json[i].numOfBedrooms == searchInput.numOfBedrooms ||
+                    json[i].city == searchInput.location ||
+                    json[i].propertyType == searchInput.propertyType ||
+                    json[i].listingType == searchInput.listingType 
+                    
+                ) {
+
+                    var result = {
+                        city: null,
+                        propertyType: null,
+                        listingType: null,
+                        numOfBedrooms: null
+                    };
+
+                    result.city = json[i].city;
+                    result.propertyType = json[i].propertyType;
+                    result.listingType = json[i].listingType;
+                    result.numOfBedrooms = json[i].numOfBedrooms;
+                    console.log(result);
+                    searchResults.push(result);
+                }
+
+            }
+        });
+
+    $('#rooms').click(function () {
+        searchResults.map(c => {
+            return $('#rooms').append(`<li>${c.city},${c.propertyType},${c.listingType},${c.numOfBedrooms}</li>`);
+        })
+
+    });
+    ///////////////////////////////////////////////////////
+
+
+    //////////////////////////////////////////////
 
     $('.ourAdvantages').one('mouseenter', function () {
         var x1 = 1;
@@ -145,8 +183,17 @@ $(document).ready(function () {
         var location = $('#location').val();
         var propertyType = $('#propertyType').val();
         var listingType = $('#listingType').val();
-        var noOfBedrooms = $('#noOfBedrooms').val();
-        window.location.href = `search_results.html?location=${location}&propertyType=${propertyType}&listingType=${listingType}&noOfBedrooms=${noOfBedrooms}`;
+        var numOfBedrooms = $('#noOfBedrooms').val();
+        var query={};
+        if($('#location').val() !== ''){
+            query.location=$('#location').val();
+        }
+        if($('#propertyType').val() !== ''){
+            query.propertyType=$('#propertyType').val();
+        }
+        // window.location.href = `search_results.html?location=${location}&propertyType=${propertyType}&listingType=${listingType}&noOfBedrooms=${numOfBedrooms}`;
+        window.location.href = `search_results.html?query=${JSON.stringify(query)}`;
+   
     });
 
     $.urlParam = function (name) {
@@ -155,13 +202,12 @@ $(document).ready(function () {
     }
 
     var searchInput = {};
-        searchInput.location = decodeURIComponent($.urlParam('location')); // name
-        searchInput.propertyType = decodeURIComponent($.urlParam('propertyType')); // 6
-        searchInput.listingType = decodeURIComponent($.urlParam('listingType')); // null
-        searchInput.noOfBedrooms = $.urlParam('noOfBedrooms'); // null
 
-    console.log(searchInput);
-
-    $().text()
-
+    searchInput = decodeURIComponent($.urlParam('query')); // name
+    console.log(JSON.parse(searchInput));
+    // searchInput.location = decodeURIComponent($.urlParam('location')); // name
+    // searchInput.propertyType = decodeURIComponent($.urlParam('propertyType')); // 6
+    // searchInput.listingType = decodeURIComponent($.urlParam('listingType')); // null
+    // searchInput.numOfBedrooms = decodeURIComponent($.urlParam('numOfBedrooms')); // null
+    // console.log(searchInput);
 })
