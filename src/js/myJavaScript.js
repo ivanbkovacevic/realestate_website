@@ -4,6 +4,38 @@ $(document).ready(function () {
     var myInt3 = null;
     var w = window.innerWidth;
 
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("brush");
+
+    var c1 = document.getElementById("myCanvas1");
+    var ctx1 = c1.getContext("2d");
+    var img1 = document.getElementById("brush1");
+   
+    ctx.drawImage(img,10,10);
+    ctx.globalCompositeOperation="source-out";
+    ctx.fillStyle="white";
+    ctx.fillRect(10,10,800,600);
+
+    ctx1.drawImage(img1,10,10);
+    ctx1.fillStyle="red";
+    ctx1.globalCompositeOperation="multiply";
+    ctx1.fillRect(10,10,800,600);
+  
+
+    
+
+   
+   
+ 
+
+ 
+
+  
+    
+
+    //////////////////////////////
+
     var searchResults = [];
     fetch('../assets/generated.json')
         .then(response => response.json())
@@ -210,4 +242,6 @@ $(document).ready(function () {
     // searchInput.listingType = decodeURIComponent($.urlParam('listingType')); // null
     // searchInput.numOfBedrooms = decodeURIComponent($.urlParam('numOfBedrooms')); // null
     // console.log(searchInput);
+
+    
 })

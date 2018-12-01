@@ -15,39 +15,31 @@ img{
 }
 
 
-
-.img1{
-    position: relative;
-    margin-top: 200px;
-    margin-left: 50px;
-    width: 200px;
-    height: 200px;
-    background-blend-mode: multiply;
-    background-color: red;
-  
-
+///////////////////////////////////////////
+#myCanvas{
+    position: absolute;
+    left: 10%;
+    margin: 200px;
+    border: 1px solid black;
 }
-.img2{
-    position: relative;
-    margin-top: 200px;
-    margin-left: 50px;
-    width: 200px;
-    height: 200px;
-    background-blend-mode:luminosity;
-    background-color: red;
-  
+#myCanvas1{
+    position: absolute;
+    left: 10%;
+    margin: 200px;
+    border: 1px solid black;
 }
 
 
-
-
-// .over-blue{
-//     position: relative;
-//     margin: 100px;
-//     width: 300px;
-//     height: 300px;
-//     background-image: linear-gradient(to right,rgba(0, 0, 255, 0.616) 100%,rgba(0, 0, 255, 0.137) 100%);
-//     background-position: center;
-//     background-size: cover;
-//     background-repeat: no-repeat;
-// }
+.color{
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    z-index: 99999;
+}
+#brush{
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(10px 10px 30px green);
+    }
