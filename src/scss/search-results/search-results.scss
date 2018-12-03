@@ -43,3 +43,34 @@ img{
     height: 100px;
     filter: drop-shadow(10px 10px 30px green);
     }
+
+///////////////////////////////////////////////ANIMATIONS ///////////////////
+.line{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+#JSobject{
+    font-size: 6rem;
+}
+
+.container{
+    display: flex;
+    margin-top: 300px;
+}
+
+.letter{
+    width: 100px;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1px;
+    color:rgb(48, 197, 11);
+    padding: 5px;
+   
+    &__5{
+        border: none;
+        background-color: transparent;
+    }
+}
+

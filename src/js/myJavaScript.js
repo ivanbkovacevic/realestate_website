@@ -18,7 +18,7 @@ $(document).ready(function () {
     ctx.fillRect(10,10,800,600);
 
     ctx1.drawImage(img1,10,10);
-    ctx1.fillStyle="red";
+    ctx1.fillStyle="blue";
     ctx1.globalCompositeOperation="multiply";
     ctx1.fillRect(10,10,800,600);
   
