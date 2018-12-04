@@ -35,6 +35,16 @@ $('#reset').click(function(){
 })
 
 
+
+var JSarray = anime({
+  targets: ['.a','.b','.c'],
+  translateX: 250,
+  duration: function(el,i,l){
+   return 1500*i+1100;
+  }
+});
+
+
 var brojevi={vrednost:1}
 var jsObject = anime({
     targets: brojevi,
@@ -48,6 +58,17 @@ var jsObject = anime({
     }
   });
 
+  var promise =jsObject.finished.then(logFinished);
+  function logFinished() {
+    jsObject=anime({
+     targets:brojevi,
+     scale:2,
+     loop:true,
+     easing:'linear',
+     duration:3000
+   })
+   console.log('PROMISE')
+  }
 //   var lineDrawing = anime({
 //     targets: '#lineDrawing .lines path',
 //     strokeDashoffset: [anime.setDashoffset, 0],
@@ -82,21 +103,13 @@ var letters = anime.timeline({
   letters.add({
     targets: '.letter ',
     translateY: -200,
-    rotate: 360,
+    rotate: 720,
     duration: function(el, i, l) {
-      return 8000 + (i * 600);
+      return 1000 + (i * 600);
     }
   });
 
-// letters.add({
-//     targets: '.letter ',
-//     translateY: -350,
-//     scale: 2,
-//     direction: 'alternate',
-//     duration: function(el, i, l) {
-//         return 1000 + (i * 100);
-//       }
-// });
+
 // letters.add({
 //     targets: '.letter ',
 //     translateY: -350,
