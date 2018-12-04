@@ -16,6 +16,11 @@ $('#go').click(function(){
             {value: '#FFF'}, // Or #FFFFFF
             {value: 'rgb(255, 0, 0)'},        
           ],
+          width:[
+            {value:'300px'},
+            { delay:3000}
+          ],
+         
       });
 })
 
@@ -69,15 +74,6 @@ var jsObject = anime({
    })
    console.log('PROMISE')
   }
-//   var lineDrawing = anime({
-//     targets: '#lineDrawing .lines path',
-//     strokeDashoffset: [anime.setDashoffset, 0],
-//     easing: 'easeInOutSine',
-//     duration: 11500,
-//     delay: function(el, i) { return i * 250 },
-//     direction: 'alternate',
-//     loop: true
-//   });
 
 var letters = anime({
   targets: '.letter ',
@@ -110,11 +106,3 @@ var letters = anime.timeline({
   });
 
 
-// letters.add({
-//     targets: '.letter ',
-//     translateY: -350,
-//     scale: 1,
-//     duration: function(el, i, l) {
-//         return 1000 + (i * 100);
-//       }
-// })
