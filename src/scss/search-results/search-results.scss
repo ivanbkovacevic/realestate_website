@@ -107,3 +107,160 @@ img{
     }
   }
 
+  /////////////////////////////////////////////FREELANCE ANIMATION ///////////////////////////
+
+  .freelanceAnimation{
+      position: relative;
+      border: 3px solid rgb(233, 8, 8);
+      width: 100%;
+      overflow: hidden;
+      h1{
+        color: white;
+        text-align: center;
+        font-size: 5rem;
+        margin-top: 30%;
+    }
+    
+      .map{  
+        height: 1200px;
+        width: 100%;
+        border: 3px solid rgb(22, 209, 31);
+        background-image: url(../../assets/img/hmpg_backgrounds_03a.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+    .point{
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: white;
+
+        &__1{
+            position: absolute;
+            top: 50%;left:30%;
+            width: 10px;
+            height: 10px;
+          &::before{
+            content: ' ';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 3px solid white;
+            width: 10px;
+            height: 10px;
+            transform-origin: 50% 50%;
+            transition: all 3s;
+            animation: pulsing 3000ms infinite ease-in-out;
+          }
+          &::after{
+            content: ' ';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(0%, 0%);
+            display: inline-block;
+            background-color: transparent;
+            border: 3px solid rgb(238, 13, 13);
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            transform-origin: 50% 50%;
+            transition: all 3s;
+           
+          }
+          &:hover:after{
+            width: 100px;
+            height: 100px;
+        }
+
+
+        }
+        &__2{
+            position: absolute;
+            top: 50%;left:70%;
+            width: 10px;
+            height: 10px;
+          &::before{
+            content: ' ';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 3px solid white;
+            width: 10px;
+            height: 10px;
+            transform-origin: 50% 50%;
+            transition: all 3s;
+            animation: pulsing 3000ms infinite ease-in-out;
+          }
+        }
+        &__3{
+            position: absolute;
+            top: 30%;left:70%;
+            width: 10px;
+            height: 10px;
+          &::before{
+            content: ' ';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 3px solid white;
+            width: 10px;
+            height: 10px;
+            transform-origin: 50% 50%;
+            transition: all 3s;
+            animation: pulsing 3000ms infinite ease-in-out;
+          }
+        }
+        &__4{
+           margin-left: 100px;
+            width: 10px;
+            height: 10px;
+          &::before{
+            content: ' ';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 3px solid white;
+            width: 10px;
+            height: 10px;
+            transform-origin: 50% 50%;
+            transition: all 3s;
+            animation: pulsing 3000ms infinite ease-in-out;
+          }
+        }
+    }
+  
+  }
+
+  @keyframes pulsing{
+      0%{
+        width: 5px;
+        height: 5px;
+      }
+      100%{
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
+  }
+
+
+
