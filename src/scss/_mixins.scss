@@ -85,3 +85,16 @@
           transform: translateX(0px) rotate(-90deg);
       }
   }
+
+  //////////////////////// SPINNER ///////////////////////////
+
+ @mixin orbiter__element($transZ,$bgColor,$animDelay){
+    transform-style: preserve-3d;
+    transform: translateZ($transZ);
+    height: 20px;
+    width: 20px;
+    background-color: $bgColor;
+    border-radius: 100%;
+    transition: all 3s;
+    animation: upDown 4s $animDelay infinite linear ;
+    }
