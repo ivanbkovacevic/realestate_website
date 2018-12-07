@@ -119,10 +119,14 @@ img {
 }
 
 /////////////////////////////////////////////GOOGLE MAP ///////////////////////////
+$circleColor1: rgba(17, 231, 10, 0.685);
+$orbiterColor:rgb(194, 207, 5);
+$transZ:90px;
 .spinner-container {
-    width: 260px;
-    height: 260px;
+    width: 860px;
+    height: 860px;
     border: 2px solid green;
+    background-color: black;
     margin: 60px auto;
     perspective: 1200px;
 
@@ -137,7 +141,7 @@ img {
         position: absolute;
         top: 50%;
         left: 50%;
-        //background-color: red;
+        background-color: $circleColor1;
         animation: rotateCircle 4s 0s infinite linear;
 
         .orbiter {
@@ -150,10 +154,10 @@ img {
                     width: 100%;
                     height: 100%;
                     transform: rotateY(90deg) translateX(0%) translateZ(-10px);
-                    background-color: red;
+                    background-color: $orbiterColor;
                     border-radius: 100%;
                 }
-                @include orbiter__element(80px, green, 0s);
+                @include orbiter__element($transZ, $orbiterColor, 0s);
             }
 
             &__2 {
@@ -164,10 +168,10 @@ img {
                     width: 100%;
                     height: 100%;
                     transform: rotateY(90deg) translateX(0%) translateZ(-10px);
-                    background-color: red;
+                    background-color: $orbiterColor;
                     border-radius: 100%;
                 }
-                @include orbiter__element(80px, orange, 0s);
+                @include orbiter__element($transZ, $orbiterColor, 2s);
             }
         }
     }
@@ -183,7 +187,7 @@ img {
         position: absolute;
         top: 50%;
         left: 50%;
-      // background-color: rgb(0, 0, 255);
+       background-color:$circleColor1;
         animation: rotateCircle 4s 0s infinite linear reverse;
     
         .orbiter {
@@ -195,10 +199,10 @@ img {
                     width: 100%;
                     height: 100%;
                     transform: rotateY(90deg) translateX(0%) translateZ(-10px);
-                    background-color: red;
+                    background-color: $orbiterColor;
                     border-radius: 100%;
                 }
-                @include orbiter__element(80px, red, 0s );
+                @include orbiter__element($transZ, $orbiterColor, 0s );
             }
 
             &__4 {
@@ -209,10 +213,10 @@ img {
                     width: 100%;
                     height: 100%;
                     transform: rotateY(90deg) translateX(0%) translateZ(-10px);
-                    background-color: red;
+                    background-color: $orbiterColor;
                     border-radius: 100%;
                 }
-                @include orbiter__element(80px, blue, 0s);
+                @include orbiter__element($transZ, $orbiterColor, 2s);
             }
         }
     }
@@ -220,10 +224,10 @@ img {
     a {
         display: inline-block;
         position: absolute;
-        top: 52%;
+        top: 22%;
         left: 50%;
         transform: translate(-50%, -50%);
-        color: black;
+        color: white;
         font-size: 2rem;
         animation: textGlow 1s infinite linear;
     }
@@ -232,11 +236,11 @@ img {
 //////////////////////////////////////
 @keyframes rotateCircle {
     0% {
-        transform: rotateY(0) translate(-50%, -50%);
+        transform: rotateY(0) rotateX(45deg) translate(-50%, -50%);
     }
 
     100% {
-        transform: rotateY(360deg) translate(-50%, -50%);
+        transform: rotateY(360deg) rotateX(45deg) translate(-50%, -50%);
     }
 }
 
@@ -256,9 +260,12 @@ img {
 
 @keyframes upDown {
     0% {
-        transform:  translateZ(100px);
+        transform:  translateZ($transZ) translateY(100px) translateX(100px);
     }
+50%{
+    transform:translateZ($transZ) translateY(150px)  translateX(150px);;
+}
 100%{
-    transform: translateZ(100px);
+    transform:translateZ($transZ) translateY(100px)  translateX(100px);;
 }
 }

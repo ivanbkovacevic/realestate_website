@@ -1,7 +1,7 @@
 const api_key='YMCmTVyivBUINPG9FGFHDqjF8T530tFO';
 let json=null;
 let gifSource=null;
-let word=null;
+let word='cat ';
 
 async function callApi(){
     let response= await fetch( `http://api.giphy.com/v1/gifs/search?q=${word}&api_key=${api_key}&limit=20`);
@@ -16,8 +16,10 @@ async function callApi(){
 //////////////////////////
 $('#changeGif').on({
 'click': function(){
-     word= $('#wordSearch').val();
+     word+= $('#wordSearch').val();
      console.log(word)
     callApi();
+     word='cat ';
+  
 }
 });
